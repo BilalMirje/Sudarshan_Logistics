@@ -4,6 +4,7 @@ import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
 
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -12,6 +13,15 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Configuration
 public class BeansConfig {
+
+    @Value("${cloudinary.cloud_name}")
+    private String cloudName;
+
+    @Value("${cloudinary.api_key}")
+    private String apiKey;
+
+    @Value("${cloudinary.api_secret}")
+    private String apiSecret;
 
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
@@ -26,18 +36,14 @@ public class BeansConfig {
     @Bean
     public Cloudinary cloudinary() {
         return new Cloudinary(ObjectUtils.asMap(
-                "cloud_name", "dn95xyaix", // from dashboard
-                "api_key", "547887632237319", // from dashboard
-                "api_secret", "3aicZR_TEnaNzDT1_Tf7luA2jTw" // from dashboard
+                "cloud_name", cloudName,
+                "api_key", apiKey,
+                "api_secret", apiSecret
         ));
     }
 
     @Bean
     public ModelMapper modelMapper() {
-        ModelMapper modelMapper = new ModelMapper();
-
-        return modelMapper;
-
+        return new ModelMapper();
     }
-
 }
