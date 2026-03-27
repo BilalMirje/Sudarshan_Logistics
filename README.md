@@ -15,7 +15,6 @@ The system centralizes logistics processes under admin control, improving operat
 - REST APIs  
 - JWT Authentication  
 
----
 ```
 ## 🧱 Project Structure
 
