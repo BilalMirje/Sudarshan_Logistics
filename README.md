@@ -16,8 +16,8 @@ The system centralizes logistics processes under admin control, improving operat
 - JWT Authentication  
 
 ---
-
 ## 🧱 Project Structure
+
 src/main/java/com/example/project
 │
 ├── controller/ # Handles HTTP requests and APIs
@@ -28,7 +28,6 @@ src/main/java/com/example/project
 ├── config/ # Security and application configuration
 ├── security/ # JWT authentication and filters
 ├── util/ # Utility classes
-
 
 ---
 
