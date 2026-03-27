@@ -17,6 +17,20 @@ The system centralizes logistics processes under admin control, improving operat
 
 ---
 
+## 🧱 Project Structure
+src/main/java/com/example/project
+│
+├── controller/ # Handles HTTP requests and APIs
+├── service/ # Business logic implementation
+├── repository/ # Database interaction (JPA repositories)
+├── entity/ # Database entities / models
+├── dto/ # Data Transfer Objects
+├── config/ # Security and application configuration
+├── util/ # Utility classes
+
+
+---
+
 ## 👥 Key Roles
 
 ### 🔹 Admin
