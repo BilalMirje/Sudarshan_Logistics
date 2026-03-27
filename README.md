@@ -26,6 +26,7 @@ src/main/java/com/example/project
 ├── entity/ # Database entities / models
 ├── dto/ # Data Transfer Objects
 ├── config/ # Security and application configuration
+├── security/ # JWT authentication and filters
 ├── util/ # Utility classes
 
 
